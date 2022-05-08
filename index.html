@@ -6,8 +6,9 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Laxman Gour</title>
+	<title>LDY Group</title>
 	<meta name="author" content="dhruvgour">
+	<meta name="google-signin-client_id" content="83551503070-fr03qfbgvec9kjk8n5in1tdqd35048fl.apps.googleusercontent.com">
 
 	<!-- Mobile Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -134,7 +135,7 @@
 				<div class="col-sm-12">
 					<h2>Welcome to <strong>LDY Group Narmadapuram</strong> - <span>Awesome</span> Multipurpose
 						Development</h2>
-					<p>Text here</p>
+					<p>We create apps, Website and logo</p>
 				</div>
 
 			</div>
@@ -247,7 +248,8 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h1 id="about" class="title text-center">About <span>LDY</span></h1>
-					<p class="lead text-center">LDY Group Narmadapuram create awesome apps, portfolio, professional websites </p>
+					<p class="lead text-center">LDY Group Narmadapuram create awesome apps, portfolio, professional
+						websites </p>
 					<div class="space"></div>
 					<div class="row">
 						<div class="col-md-6">
@@ -965,8 +967,8 @@
 						<!-- Bottom Carousel Indicators -->
 						<ol class="carousel-indicators">
 							<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-							<li data-target="#quote-carousel" data-slide-to="1"></li>
-							<li data-target="#quote-carousel" data-slide-to="2"></li>
+							<!--<li data-target="#quote-carousel" data-slide-to="1"></li>-->
+							<!--<li data-target="#quote-carousel" data-slide-to="2"></li>-->
 						</ol>
 
 						<!-- Carousel Slides / Quotes -->
@@ -974,56 +976,20 @@
 
 							<!-- Quote 1 -->
 							<div class="item active">
-								<blockquote>
-									<div class="row">
-										<div class="col-sm-3 text-center">
-											<img class="img-circle"
-												src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg"
-												style="width: 100px;height:100px;">
-										</div>
-										<div class="col-sm-9">
-											<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-												consectetur, adipisci velit!</p>
-											<small>Someone famous</small>
-										</div>
+
+								<div class="row">
+									<div class="col-sm-3 text-center">
+										<img class="img" src="IMG20220108143150.jpg"
+											style="width: 90px;height:110px; border-radius: 5%;">
 									</div>
-								</blockquote>
-							</div>
-							<!-- Quote 2 -->
-							<div class="item">
-								<blockquote>
-									<div class="row">
-										<div class="col-sm-3 text-center">
-											<img class="img-circle"
-												src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg"
-												style="width: 100px;height:100px;">
-										</div>
-										<div class="col-sm-9">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec
-												lacus ut tempor. Mauris.</p>
-											<small>Someone famous</small>
-										</div>
+									<div class="col-sm-9">
+										<p id="laxman" style="font-size: 22px;">Laxman Gour</p>
+										<p style="font-size: 18px;">Owner and founder of LDY Group Naramdapuram</p>
 									</div>
-								</blockquote>
+								</div>
+
 							</div>
 							<!-- Quote 3 -->
-							<div class="item">
-								<blockquote>
-									<div class="row">
-										<div class="col-sm-3 text-center">
-											<img class="img-circle"
-												src="https://s3.amazonaws.com/uifaces/faces/twitter/keizgoesboom/128.jpg"
-												style="width: 100px;height:100px;">
-										</div>
-										<div class="col-sm-9">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit
-												in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo
-												tortor, eu pretium mauris.</p>
-											<small>Someone famous</small>
-										</div>
-									</div>
-								</blockquote>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -1135,7 +1101,7 @@
 
 					<div class="col-sm-6">
 						<div class="footer-content">
-							<form role="form" id="footer-form">
+							<form role="form" id="footer-form" onsubmit="SendGmail()">
 								<div class="form-group has-feedback">
 									<label class="sr-only" for="name2">Name</label>
 									<input type="text" class="form-control" id="name2" placeholder="Name" name="name2"
@@ -1154,10 +1120,28 @@
 										name="message2" required></textarea>
 									<i class="fa fa-pencil form-control-feedback"></i>
 								</div>
-								<input type="submit" value="Send" class="btn btn-default">
+								<input type="submit" value="Send" class="btn btn-default" onsubmit="SendGmail()">
 							</form>
 						</div>
 					</div>
+					<script src="https://smtpjs.com/v3/smtp.js"></script>
+					<script>
+						function SendGmail() {
+							Email.send({
+								Host: "smtp.elasticemail.com",
+								Username: "dhruvgour97@gmail.com",
+								Password: "973A690397210BBAD52673391BBCB4A32238",
+								To: 'dhruvgour97@gmail.com',
+								From: document.getElementById("email2").value,
+								Subject: "New contact form enquriy",
+								Body: "Name: " + document.getElementById("name2").value +
+									"<br> Email: " + document.getElementById("email2").value +
+									"<br> Message" + document.getElementById("email2").value
+							}).then(
+								message => alert("Message sent succesfully")
+							);
+						}
+					</script>
 
 					<div class="col-sm-6">
 						<div class="footer-content">
@@ -1165,11 +1149,11 @@
 
 							<div class="widget-content">
 
-								<p>text here </p><br />
+								<p>Please feel free to contact us <br> Follow us on our social handles</p><br />
 
 								<p class="contacts"><i class="fa fa-map-marker"></i> address </p>
 
-								<p class="contacts"><i class="fa fa-phone"></i> +91</p>
+								<p class="contacts"><i class="fa fa-phone"></i> +91 7999078809</p>
 
 								<p class="contacts"><i class="fa fa-envelope"></i> drlaxmangour99@gamil.com</p>
 
@@ -1179,13 +1163,12 @@
 
 							</aside>
 							<ul class="social-links">
-								<li class="facebook"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
-								<li class="twitter"><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
-								<li class="googleplus"><a target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
+								<li class="facebook"><a target="_blank"
+										href="https://www.facebook.com/laxman.gour.92"><i
+											class="fa fa-facebook"></i></a></li>
+								<li class="twitter"><a target="_blank" href="https://twitter.com/LAXMANGOUR12"><i
+											class="fa fa-twitter"></i></a></li>
 								</li>
-								<li class="skype"><a target="_blank" href="#"><i class="fa fa-skype"></i></a></li>
-								<li class="linkedin"><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li class="youtube"><a target="_blank" href="#"><i class="fa fa-youtube"></i></a></li>
 							</ul>
 						</div>
 					</div>
